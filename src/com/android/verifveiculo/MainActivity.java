@@ -48,12 +48,21 @@ public class MainActivity extends Activity {
 					String placa = edplaca.getText().toString();
 					
 					if(placa.matches("[a-zA-Z]{3,3}-\\d{4,4}")){
-						mostrarplaca.setText("Placa Válida, região: " + uf.getUF(placa));
+						String valor = uf.getUF(placa);
+						mostrarplaca.setText("Placa Válida, região: " + valor);
 						mostrarplaca.setTextColor(Color.parseColor("#00FF7F"));
+						imgbandeira.setImageResource(uf.imagem(valor));
+						
+						if(valor.equals("Placa Invalida")){
+							imgbandeira.setImageResource(R.drawable.br);
+							return;
+						}
 					}else{
 						mostrarplaca.setText("Placa Inválida");
 						mostrarplaca.setTextColor(Color.parseColor("#FF0000"));
 					}
+						
+					
 				}	
 			}
 		});
@@ -63,7 +72,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				edplaca.setText("");
-				mostrarplaca.setText("");	
+				mostrarplaca.setText("");
 			}
 		});
 	}
