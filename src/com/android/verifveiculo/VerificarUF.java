@@ -52,44 +52,41 @@ public class VerificarUF {
 			"JDO9999", "HTW9999", "NSD9999", "OOU9999", "KAU9999", "NJW9999",
 			"NPQ9999", "NUG9999", "OBS9999", "KFC9999", "NGZ9999", "NLU9999",
 			"NWR9999", "OHA9999", "OOF9999", "JKR9999" };
-	
-	String estados[] = new String[]{
-			  "Rondônia","Acre","Amazonas","Roraima","Pará","Amapá","Tocantins","Maranhão",
-			  "Piauí","Ceará","Rio Grande do Norte","Paraíba","Pernambuco","Alagoas","Sergipe",
-			  "Bahia","Minas Gerais","Espírito Santo","Rio de Janeiro","São Paulo","Paraná",
-			  "Santa Catarina","Rio Grande do Sul","Mato Grosso do Sul","Mato Grosso",
-			  "Goiás","Distrito Federal"
-			};
-	
-	int imagens[] = new int[]{
-			R.drawable.ro,R.drawable.ac,R.drawable.am,
-			R.drawable.rr,R.drawable.pa,R.drawable.ap,
-			R.drawable.to,R.drawable.ma,R.drawable.pi,
-			R.drawable.ce,R.drawable.rn,R.drawable.pb,
-			R.drawable.pe,R.drawable.al,R.drawable.se,
-			R.drawable.ba,R.drawable.mg,R.drawable.es,
-			R.drawable.rj,R.drawable.sp,R.drawable.pr,
-			R.drawable.sc,R.drawable.rs,R.drawable.ms,
-			R.drawable.mt,R.drawable.go,R.drawable.df		
-		};
 
+	String estados[] = new String[] { "Rondônia", "Acre", "Amazonas",
+			"Roraima", "Pará", "Amapá", "Tocantins", "Maranhão", "Piauí",
+			"Ceará", "Rio Grande do Norte", "Paraíba", "Pernambuco", "Alagoas",
+			"Sergipe", "Bahia", "Minas Gerais", "Espírito Santo",
+			"Rio de Janeiro", "São Paulo", "Paraná", "Santa Catarina",
+			"Rio Grande do Sul", "Mato Grosso do Sul", "Mato Grosso", "Goiás",
+			"Distrito Federal" };
 
-	public  String getUF(String placa){
-		for (int i = 0; i < iniciais.length; i++) {
-			if ((placa.compareToIgnoreCase(iniciais[i]) >= 0)
-			  && (placa.compareToIgnoreCase(finais[i]) <= 0)) {
-				return ufs[i];
+	int imagens[] = new int[] { R.drawable.ro, R.drawable.ac, R.drawable.am,
+			R.drawable.rr, R.drawable.pa, R.drawable.ap, R.drawable.to,
+			R.drawable.ma, R.drawable.pi, R.drawable.ce, R.drawable.rn,
+			R.drawable.pb, R.drawable.pe, R.drawable.al, R.drawable.se,
+			R.drawable.ba, R.drawable.mg, R.drawable.es, R.drawable.rj,
+			R.drawable.sp, R.drawable.pr, R.drawable.sc, R.drawable.rs,
+			R.drawable.ms, R.drawable.mt, R.drawable.go, R.drawable.df };
+
+	public String getUF(String placa) {
+		 
+			for (int i = 0; i < iniciais.length; i++) {
+				if ((placa.compareToIgnoreCase(iniciais[i]) >= 0)
+						&& (placa.compareToIgnoreCase(finais[i]) <= 0)) {
+					return ufs[i];
+				}
 			}
-
-		}
+		
 		return "Placa Invalida";
 	}
-	public int imagem(String valor){
+
+	public int imagem(String valor) {
 		int i = 0;
-		while ((i < estados.length) && (!estados[i].equals(valor))){
+		while ((i < estados.length) && (!estados[i].equals(valor))) {
 			i++;
 		}
 		return imagens[i];
-			
+
 	}
 }

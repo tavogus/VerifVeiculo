@@ -13,12 +13,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
-	
+
 	private EditText edplaca;
 	private Button btverificar, btlimpar;
 	private TextView mostrarplaca;
-	private ImageView imgbandeira; 
-	
+	private ImageView imgbandeira;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,47 +27,53 @@ public class MainActivity extends Activity {
 		validarPlaca();
 		limparCampos();
 	}
-	
-	private void getComponets(){
+
+	private void getComponets() {
 		edplaca = (EditText) findViewById(R.id.edplaca);
 		btverificar = (Button) findViewById(R.id.butverificar);
 		btlimpar = (Button) findViewById(R.id.butlimpar);
-		mostrarplaca = (TextView) findViewById(R.id.mostrarplaca);	
+		mostrarplaca = (TextView) findViewById(R.id.mostrarplaca);
 		imgbandeira = (ImageView) findViewById(R.id.imgbandeira);
 
 	}
 
-	private void validarPlaca(){
+	private void validarPlaca() {
 		btverificar.setOnClickListener(new OnClickListener() {
 			@Override
-			public void onClick(View v) {  
+			public void onClick(View v) {
 				VerificarUF uf = new VerificarUF();
-				if(edplaca.getText().toString().isEmpty()){
-					Toast.makeText(getApplicationContext(),"Informe a placa para validar",Toast.LENGTH_LONG).show();
-				}else{
+				if (edplaca.getText().toString().isEmpty()) {
+					Toast.makeText(getApplicationContext(),
+							"Informe a placa para validar", Toast.LENGTH_LONG)
+							.show();
+				} else {
 					String placa = edplaca.getText().toString();
-					
-					if(placa.matches("[a-zA-Z]{3,3}-\\d{4,4}")){
+
+					if (placa.matches("[a-zA-Z]{3,3}-\\d{4,4}")) {
 						String valor = uf.getUF(placa);
-						mostrarplaca.setText("Placa Válida, região: " + valor);
-						mostrarplaca.setTextColor(Color.parseColor("#00FF7F"));
-						imgbandeira.setImageResource(uf.imagem(valor));
-						
 						if(valor.equals("Placa Invalida")){
+							mostrarplaca.setText("Placa Inexistente");
+							mostrarplaca.setTextColor(Color.parseColor("#FF0000"));
 							imgbandeira.setImageResource(R.drawable.br);
 							return;
 						}
-					}else{
-						mostrarplaca.setText("Placa Inválida");
+						mostrarplaca.setText("Placa Válida, região: " + valor);
+						mostrarplaca.setTextColor(Color.parseColor("#00FF7F"));
+						imgbandeira.setImageResource(uf.imagem(valor));
+					}else{ 
+						mostrarplaca.setText("Placa Invalida");
+						imgbandeira.setImageResource(R.drawable.br);
 						mostrarplaca.setTextColor(Color.parseColor("#FF0000"));
-					}
 						
-					
-				}	
-			}
+						
+						}
+					}
+				}
+			
 		});
 	}
-	private void limparCampos(){
+
+	private void limparCampos() {
 		btlimpar.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
@@ -76,7 +82,7 @@ public class MainActivity extends Activity {
 			}
 		});
 	}
-	
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
