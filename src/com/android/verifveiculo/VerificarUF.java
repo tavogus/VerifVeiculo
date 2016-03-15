@@ -18,24 +18,24 @@ public class VerificarUF {
 			"NPC0001", "NTX0001", "OAP0001", "KAV0001", "NFC0001", "NJX0001",
 			"NVO0001", "OGH0001", "OMI0001", "JDP0001" };
 
-	String ufs[] = new String[] { "RondÙnia", "RondÙnia", "Acre", "Acre",
-			"Amazonas", "Amazonas", "Amazonas", "Roraima", "Roraima", "Par·",
-			"Par·", "Par·", "Par·", "Par·", "Amap·", "Tocantins", "Tocantins",
-			"Maranh„o", "Maranh„o", "Maranh„o", "Maranh„o", "Maranh„o",
-			"PiauÌ", "PiauÌ", "PiauÌ", "PiauÌ", "Cear·", "Cear·", "Cear·",
-			"Cear·", "Cear·", "Cear·", "Rio Grande do Norte",
-			"Rio Grande do Norte", "Rio Grande do Norte", "ParaÌba", "ParaÌba",
-			"ParaÌba", "ParaÌba", "Pernambuco", "Pernambuco", "Pernambuco",
+	String ufs[] = new String[] { "Rond√¥nia", "Rond√¥nia", "Acre", "Acre",
+			"Amazonas", "Amazonas", "Amazonas", "Roraima", "Roraima", "Par√°",
+			"Par√°", "Par√°", "Par√°", "Par√°", "Amap√°", "Tocantins", "Tocantins",
+			"Maranh√£o", "Maranh√£o", "Maranh√£o", "Maranh√£o", "Maranh√£o",
+			"Piau√≠", "Piau√≠", "Piau√≠", "Piau√≠", "Cear√°", "Cear√°", "Cear√°",
+			"Cear√°", "Cear√°", "Cear√°", "Rio Grande do Norte",
+			"Rio Grande do Norte", "Rio Grande do Norte", "Para√≠ba", "Para√≠ba",
+			"Para√≠ba", "Para√≠ba", "Pernambuco", "Pernambuco", "Pernambuco",
 			"Pernambuco", "Pernambuco", "Alagoas", "Alagoas", "Alagoas",
 			"Alagoas", "Sergipe", "Sergipe", "Sergipe", "Bahia", "Bahia",
 			"Bahia", "Bahia", "Bahia", "Minas Gerais", "Minas Gerais",
-			"Minas Gerais", "Minas Gerais", "EspÌrito Santo", "EspÌrito Santo",
-			"EspÌrito Santo", "Rio de Janeiro", "S„o Paulo", "S„o Paulo",
-			"Paran·", "Santa Catarina", "Santa Catarina", "Rio Grande do Sul",
+			"Minas Gerais", "Minas Gerais", "Esp√≠rito Santo", "Esp√≠rito Santo",
+			"Esp√≠rito Santo", "Rio de Janeiro", "S√£o Paulo", "S√£o Paulo",
+			"Paran√°", "Santa Catarina", "Santa Catarina", "Rio Grande do Sul",
 			"Mato Grosso do Sul", "Mato Grosso do Sul", "Mato Grosso do Sul",
 			"Mato Grosso", "Mato Grosso", "Mato Grosso", "Mato Grosso",
-			"Mato Grosso", "Goi·s", "Goi·s", "Goi·s", "Goi·s", "Goi·s",
-			"Goi·s", "Distrito Federal" };
+			"Mato Grosso", "Goi√°s", "Goi√°s", "Goi√°s", "Goi√°s", "Goi√°s",
+			"Goi√°s", "Distrito Federal" };
 
 	String finais[] = new String[] { "NEH9999", "OHW9999", "NAG9999",
 			"NXT9999", "JXY9999", "NPB9999", "OAO9999", "NBA9999", "NUL9999",
@@ -53,12 +53,12 @@ public class VerificarUF {
 			"NPQ9999", "NUG9999", "OBS9999", "KFC9999", "NGZ9999", "NLU9999",
 			"NWR9999", "OHA9999", "OOF9999", "JKR9999" };
 
-	String estados[] = new String[] { "RondÙnia", "Acre", "Amazonas",
-			"Roraima", "Par·", "Amap·", "Tocantins", "Maranh„o", "PiauÌ",
-			"Cear·", "Rio Grande do Norte", "ParaÌba", "Pernambuco", "Alagoas",
-			"Sergipe", "Bahia", "Minas Gerais", "EspÌrito Santo",
-			"Rio de Janeiro", "S„o Paulo", "Paran·", "Santa Catarina",
-			"Rio Grande do Sul", "Mato Grosso do Sul", "Mato Grosso", "Goi·s",
+	String estados[] = new String[] { "Rond√¥nia", "Acre", "Amazonas",
+			"Roraima", "Par√°", "Amap√°", "Tocantins", "Maranh√£o", "Piau√≠",
+			"Cear√°", "Rio Grande do Norte", "Para√≠ba", "Pernambuco", "Alagoas",
+			"Sergipe", "Bahia", "Minas Gerais", "Esp√≠rito Santo",
+			"Rio de Janeiro", "S√£o Paulo", "Paran√°", "Santa Catarina",
+			"Rio Grande do Sul", "Mato Grosso do Sul", "Mato Grosso", "Goi√°s",
 			"Distrito Federal" };
 
 	int imagens[] = new int[] { R.drawable.ro, R.drawable.ac, R.drawable.am,
@@ -77,7 +77,6 @@ public class VerificarUF {
 					return ufs[i];
 				}
 			}
-		
 		return "Placa Invalida";
 	}
 

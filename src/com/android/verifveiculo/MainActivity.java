@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 public class MainActivity extends Activity {
 
 	private EditText edplaca, edtel;
@@ -61,7 +62,11 @@ public class MainActivity extends Activity {
 							imgbandeira.setImageResource(R.drawable.br);
 							return;
 						}
+<<<<<<< HEAD
 						mostrarplaca.setText("Placa "+ placa + " Válida, região: " + valor);
+=======
+						mostrarplaca.setText("Placa VÃ¡lida, regiÃ£o: " + valor);
+>>>>>>> c4ba5b9531325c33be64c9bb2436138e27dc00ab
 						mostrarplaca.setTextColor(Color.parseColor("#00FF7F"));
 						imgbandeira.setImageResource(uf.imagem(valor));
 					}else{ 
