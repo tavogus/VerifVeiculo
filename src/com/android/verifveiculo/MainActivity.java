@@ -47,6 +47,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				VerificarUF uf = new VerificarUF();
+				
 				if (edplaca.getText().toString().isEmpty()) {
 					Toast.makeText(getApplicationContext(),
 							"Informe a placa para validar", Toast.LENGTH_LONG)
@@ -56,17 +57,14 @@ public class MainActivity extends Activity {
 
 					if (placa.matches("[a-zA-Z]{3,3}-\\d{4,4}")) {
 						String valor = uf.getUF(placa);
+						
 						if(valor.equals("Placa Invalida")){
 							mostrarplaca.setText("Placa Inexistente");
 							mostrarplaca.setTextColor(Color.parseColor("#FF0000"));
 							imgbandeira.setImageResource(R.drawable.br);
 							return;
 						}
-<<<<<<< HEAD
-						mostrarplaca.setText("Placa "+ placa + " Válida, região: " + valor);
-=======
-						mostrarplaca.setText("Placa VÃ¡lida, regiÃ£o: " + valor);
->>>>>>> c4ba5b9531325c33be64c9bb2436138e27dc00ab
+						mostrarplaca.setText("Placa " + placa + " Válida, região: " + valor);
 						mostrarplaca.setTextColor(Color.parseColor("#00FF7F"));
 						imgbandeira.setImageResource(uf.imagem(valor));
 					}else{ 
