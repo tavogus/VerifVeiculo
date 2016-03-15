@@ -61,7 +61,7 @@ public class MainActivity extends Activity {
 							imgbandeira.setImageResource(R.drawable.br);
 							return;
 						}
-						mostrarplaca.setText("Placa Válida, região: " + valor);
+						mostrarplaca.setText("Placa "+ placa + " Válida, região: " + valor);
 						mostrarplaca.setTextColor(Color.parseColor("#00FF7F"));
 						imgbandeira.setImageResource(uf.imagem(valor));
 					}else{ 
